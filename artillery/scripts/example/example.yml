@@ -1,0 +1,9 @@
+config:
+  target: https://artillery.io
+  engines:
+    playwright: { aggregateByName: true }
+  processor: "../../../tests/artillery/example/example.spec.ts"
+scenarios:
+  - name: example
+    engine: playwright
+    testFunction: "example"

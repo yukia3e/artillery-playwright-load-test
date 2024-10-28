@@ -1,0 +1,8 @@
+services:
+  # Artillery with playwright
+  artillery-playwright:
+    build:
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ./:/artillery
+    command: run /artillery/${YAML:-artillery/scripts/example/example.yml}
